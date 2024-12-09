@@ -17,7 +17,7 @@
   </nav>
   <div class="container">
     <div>
-      <button class="button" onclick="cf_func()">Button</button>
+      <button id="action" class="button" onclick="cf_func()">Button</button>
 
     </div>
     <div id="tagline">
@@ -28,6 +28,7 @@
   <script>
     const cf_func = () => {
       placeholder = document.getElementById('tagline');
+      button = document.getElementById('action');
 
       console.log('cf_func');
       fetch('./helloworld')
@@ -35,6 +36,8 @@
         .then(data => {
           console.log(data);
           placeholder.innerHTML = data.message;
+          action.setAttribute('dsiabled');
+
         })
         .catch(error => {
           console.error('Error:', error);
