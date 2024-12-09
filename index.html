@@ -34,7 +34,7 @@
         .then(response => response.json())
         .then(data => {
           console.log(data);
-          placeholder.innerHTML = data.tagline;
+          placeholder.innerHTML = data.message;
         })
         .catch(error => {
           console.error('Error:', error);
