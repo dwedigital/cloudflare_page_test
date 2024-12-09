@@ -15,6 +15,27 @@
       <!-- navbar items, navbar burger... -->
     </div>
   </nav>
+  <div class="container">
+    <div>
+      <button class="button" onclick="cf_func()">Button</button>
+
+    </div>
+  </div>
+
+  <script>
+    const cf_func = () => {
+      console.log('cf_func');
+      fetch('./helloworld')
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+    }
+  </script>
+
 </body>
 
 </html>
