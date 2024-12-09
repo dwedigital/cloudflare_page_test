@@ -20,15 +20,21 @@
       <button class="button" onclick="cf_func()">Button</button>
 
     </div>
+    <div id="tagline">
+
+    </div>
   </div>
 
   <script>
     const cf_func = () => {
+      placeholder = document.getElementById('tagline');
+
       console.log('cf_func');
       fetch('./helloworld')
         .then(response => response.json())
         .then(data => {
           console.log(data);
+          placeholder.innerHTML = data.tagline;
         })
         .catch(error => {
           console.error('Error:', error);
