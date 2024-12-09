@@ -20,7 +20,27 @@
       <button id="action" class="button" onclick="cf_func()">Button</button>
 
     </div>
-    <div id="tagline">
+    <div class="card">
+      <div class="card-content">
+        <p class="title" id="tagline">
+
+        </p>
+        <p class="subtitle">Jeff Atwood</p>
+      </div>
+      <footer class="card-footer">
+        <p class="card-footer-item">
+          <span>
+            View on
+            <a href="https://twitter.com/codinghorror/status/506010907021828096"
+              >Twitter</a
+            >
+          </span>
+        </p>
+        <p class="card-footer-item">
+          <span> Share on <a href="#">Facebook</a> </span>
+        </p>
+      </footer>
+    </div>
 
     </div>
   </div>
@@ -35,7 +55,7 @@
         .then(response => response.json())
         .then(data => {
           console.log(data);
-          placeholder.innerHTML = data.message;
+          placeholder.innerText = data.message;
           action.setAttribute('disabled', true);
 
         })
